@@ -30,8 +30,9 @@ endfunction
 
 set nobackup
 set nowritebackup
-set guifont=Lucida_Console:h11
+set guifont="Lucida_Console:h11,Monospace"
 set number
+set ruler
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
 nnoremap <C-t>     :tabnew<CR>
