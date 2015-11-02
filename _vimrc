@@ -30,7 +30,24 @@ endfunction
 
 set nobackup
 set nowritebackup
-set guifont="Lucida_Console:h11,Monospace"
+set noundofile
+
+"set guifont="Lucida_Console:h11,Monospace:h12"
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
+
 set number
 set ruler
 nnoremap <C-S-tab> :tabprevious<CR>
@@ -39,5 +56,15 @@ nnoremap <C-t>     :tabnew<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
-"nothing
+
 inoremap <C-]> <ESC>
+
+"SYNTASTIC RECOMMENDED SETTINGS
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
