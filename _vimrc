@@ -1,7 +1,7 @@
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
-behave mswin
+"source $VIMRUNTIME/mswin.vim
+"behave mswin
 
 set diffexpr=MyDiff()
 function MyDiff()
@@ -77,4 +77,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_sings = 1
-let g:syntastic_quiet_messages = {'level':'warning'}
+"let g:syntastic_quiet_messages = {'level':'warning'}
