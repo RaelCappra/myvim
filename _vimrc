@@ -78,3 +78,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_sings = 1
 "let g:syntastic_quiet_messages = {'level':'warning'}
+
+set wildmenu
+set wildmode=longest,full
