@@ -62,7 +62,7 @@ vnoremap y ygv
 if has("clipboard")
     vnoremap <C-c> "+ygv
     vnoremap <C-v> "+p
-    "nnoremap <C-S-c> gg"+yG<C-o><C-o>
+    nnoremap <C-Space> gg"+yG<C-o><C-o>
     nnoremap <C-c> "+y
     nnoremap <C-c><C-c> "+yy
 endif
