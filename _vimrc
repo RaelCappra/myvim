@@ -57,6 +57,16 @@ inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
 
+vnoremap y ygv
+"clipboard
+if has("clipboard")
+    vnoremap <C-c> "+ygv
+    vnoremap <C-v> "+p
+    "nnoremap <C-S-c> gg"+yG<C-o><C-o>
+    nnoremap <C-c> "+y
+    nnoremap <C-c><C-c> "+yy
+endif
+
 inoremap <C-]> <ESC>
 
 "INDENTATION
@@ -81,3 +91,4 @@ let g:syntastic_enable_sings = 1
 
 set wildmenu
 set wildmode=longest,full
+
