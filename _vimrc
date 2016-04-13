@@ -67,6 +67,20 @@ if has("clipboard")
     nnoremap <C-c><C-c> "+yy
 endif
 
+"python2/python3
+function Usepy2()
+    let g:syntastic_python_python_exec = '/bin/python' 
+    let g:syntastic_python_pylint_exec = '/bin/pylint' 
+endfunction
+
+function Usepy3()
+    let g:syntastic_python_python_exec = '/bin/python3' 
+    let g:syntastic_python_pylint_exec = '/bin/python3-pylint' 
+endfunction
+
+call Usepy3()
+
+
 inoremap <C-]> <ESC>
 
 "INDENTATION
