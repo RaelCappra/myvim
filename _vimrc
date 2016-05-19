@@ -48,6 +48,7 @@ if has("gui_running")
   endif
 endif
 
+set number
 set relativenumber
 set ruler
 nnoremap <C-S-tab> :tabprevious<CR>
