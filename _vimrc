@@ -49,7 +49,6 @@ if has("gui_running")
 endif
 
 set number
-set relativenumber
 set ruler
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
@@ -70,13 +69,13 @@ endif
 
 "python2/python3
 function Usepy2()
-    let g:syntastic_python_python_exec = '/bin/python' 
-    let g:syntastic_python_pylint_exec = '/bin/pylint' 
+    let g:syntastic_python_python_exec = '/usr/env python' 
+    let g:syntastic_python_pylint_exec = '/usr/env pylint' 
 endfunction
 
 function Usepy3()
-    let g:syntastic_python_python_exec = '/bin/python3' 
-    let g:syntastic_python_pylint_exec = '/bin/python3-pylint' 
+    let g:syntastic_python_python_exec = '/usr/env python3' 
+    let g:syntastic_python_pylint_exec = '/usr/env python3-pylint' 
 endfunction
 
 call Usepy3()
@@ -103,7 +102,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_sings = 1
 "let g:syntastic_quiet_messages = {'level':'warning'}
+"pylint desligado por padrao
+let g:syntastic_python_checkers = ['python']
 
 set wildmenu
 set wildmode=longest,full
-
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
