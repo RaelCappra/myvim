@@ -69,13 +69,13 @@ endif
 
 "python2/python3
 function Usepy2()
-    let g:syntastic_python_python_exec = '/usr/env python' 
-    let g:syntastic_python_pylint_exec = '/usr/env pylint' 
+    let g:syntastic_python_python_exec = '/usr/bin/env python' 
+    let g:syntastic_python_pylint_exec = '/usr/bin/env pylint' 
 endfunction
 
 function Usepy3()
-    let g:syntastic_python_python_exec = '/usr/env python3' 
-    let g:syntastic_python_pylint_exec = '/usr/env python3-pylint' 
+    let g:syntastic_python_python_exec = '/usr/bin/env python3' 
+    let g:syntastic_python_pylint_exec = '/usr/bin/env python3-pylint' 
 endfunction
 
 call Usepy3()
