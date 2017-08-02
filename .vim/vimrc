@@ -81,8 +81,19 @@ helptags ALL
 
 "ALE
 let g:ale_sign_column_always = 1
+let g:ale_list_window_size = 6
+let g:ale_lint_delay = 400
 let g:airline#extensions#ale#enabled = 1
 let g:ale_open_list = 1
+let g:ale_fixers = {
+\   'python': [
+\       'add_blank_lines_for_python_control_statements',
+\       'autopep8',
+\       'isort',
+\       'yapf',
+\       'remove_trailing_lines',
+\   ],
+\}
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
