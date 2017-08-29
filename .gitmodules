@@ -1,3 +1,0 @@
-[submodule "Conque-Shell"]
-	path = pack/plugins/start/Conque-Shell
-	url = https://github.com/vim-scripts/Conque-Shell
